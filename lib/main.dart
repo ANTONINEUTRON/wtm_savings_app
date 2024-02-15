@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wtm_savings_app/home_page.dart';
+import 'package:wtm_savings_app/features/home/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
