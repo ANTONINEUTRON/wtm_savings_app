@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.blue,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
+        scaffoldBackgroundColor: Colors.grey.shade100
       ),
       home: HomePage(),
     );
