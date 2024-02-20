@@ -27,13 +27,49 @@ class TopSavingsSection extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.money),
-            title: Text("Piggybank"),
+            leading: Image.asset("assets/images/shield.png"),
+            title: Text(
+                "Piggybank",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
             subtitle: Text("Auto save: Daily weekly or monthly"),
             trailing: ElevatedButton(
               onPressed: () {},
-              child: Text("Save"),
+              child: Text("SAVE"),
             ),
+            contentPadding: EdgeInsets.zero,
+          ),
+          ListTile(
+            leading: Image.asset("assets/images/lock.png"),
+            title: Text(
+                "Safelock",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            subtitle: Text("Lock funds to avoid temptation"),
+            trailing: ElevatedButton(
+              onPressed: () {},
+              child: Text("LOCK"),
+            ),
+            contentPadding: EdgeInsets.zero,
+          ),
+          ListTile(
+            leading: Image.asset("assets/images/wallet.png"),
+            title: Text(
+                "Flex naira",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            subtitle: Text("Your emergency funds with interest"),
+            trailing: ElevatedButton(
+              onPressed: () {},
+              child: Text("FUND"),
+            ),
+            contentPadding: EdgeInsets.zero,
           )
         ],
       ),

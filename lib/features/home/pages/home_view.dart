@@ -3,6 +3,7 @@ import 'package:wtm_savings_app/features/home/widgets/my_todo_section.dart';
 import 'package:wtm_savings_app/features/home/widgets/saving_details_card.dart';
 import 'package:wtm_savings_app/features/home/widgets/suggestions_section.dart';
 import 'package:wtm_savings_app/features/home/widgets/top_savings_section.dart';
+import 'package:wtm_savings_app/features/home/widgets/vetted_opportunities_section.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -46,6 +47,7 @@ class HomeView extends StatelessWidget {
           MyTodoSection(),
           TopSavingsSection(),
           SuggestionsSection(),
+          VettedOpportunitiesSection(),
         ],
       ),
       floatingActionButton: FloatingActionButton(
