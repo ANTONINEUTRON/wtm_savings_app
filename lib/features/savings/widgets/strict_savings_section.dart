@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wtm_savings_app/features/savings/widgets/strict_savings_items.dart';
 
 class StrictSavingsSection extends StatelessWidget {
   const StrictSavingsSection({super.key});
@@ -26,59 +27,35 @@ class StrictSavingsSection extends StatelessWidget {
               crossAxisSpacing: 8,
               mainAxisSpacing: 8,
               children: [
-                StrictSavingsItem(),
-                StrictSavingsItem(),
-                StrictSavingsItem()
+                StrictSavingsItem(
+                  title: "PiggyBank",
+                  subtitle: "Automatic daily, weekly and monthly withdrawal",
+                  color: Colors.blue,
+                  textOnButton: "SETUP",
+                ),
+                StrictSavingsItem(
+                    textOnButton: "LOCK MONEY",
+                    title: "SafeLock",
+                    subtitle: "Lock funds to avoid temptation",
+                    color: Colors.blue.shade200
+                ),
+                StrictSavingsItem(
+                    textOnButton: "NEW GOALS",
+                    title: "Target Savings",
+                    subtitle: "Smash your savings goal faster",
+                    color: Colors.green.shade600
+                ),
+                StrictSavingsItem(
+                    textOnButton: "Add Money",
+                    title: "HouseMoney",
+                    subtitle: "Save for your housing",
+                    color: Colors.orange
+                )
               ],
             ),
           )
         ],
       ),
-    );
-  }
-}
-
-class StrictSavingsItem extends StatelessWidget {
-  const StrictSavingsItem({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.blue.shade50,
-        borderRadius: BorderRadius.circular(8),
-      ),
-      padding: EdgeInsets.all(8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              ElevatedButton(
-                  onPressed: (){},
-                  child: Text("SETUP")
-              ),
-            ],
-          ),
-          Text(
-              "PiggyBank",
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: Colors.blue.shade800
-            ),
-          ),
-          Text(
-              "Automatic daily, weekly and monthly withdrawal",
-            style: TextStyle(
-              fontWeight: FontWeight.bold
-            ),
-          )
-        ],
-      )
     );
   }
 }
