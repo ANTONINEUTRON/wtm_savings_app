@@ -21,11 +21,13 @@ class StrictSavingsSection extends StatelessWidget {
           ),
           //Gridview for holding savings categories
           SizedBox(
-            height: 350,
+            height: 370,
             child: GridView.count(
               crossAxisCount: 2,
               crossAxisSpacing: 8,
               mainAxisSpacing: 8,
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
               children: [
                 StrictSavingsItem(
                   title: "PiggyBank",
