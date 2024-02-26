@@ -45,12 +45,18 @@ class SavingDetailsCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("My savings"),
+                  Text(
+                    "My savings",
+                    style: TextStyle(
+                      color: Colors.grey.shade200
+                    ),
+                  ),
                   Text(
                     balance,
                     style: TextStyle(
                         fontWeight: FontWeight.w900,
-                        fontSize: 20
+                        fontSize: 20,
+                      color: Colors.white,
                     ),
                   )
                 ],
