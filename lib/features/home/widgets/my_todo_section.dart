@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wtm_savings_app/features/home/widgets/hide_todo_sheet.dart';
 import 'package:wtm_savings_app/features/home/widgets/my_todo_item.dart';
 
 class MyTodoSection extends StatelessWidget {
@@ -25,7 +26,15 @@ class MyTodoSection extends StatelessWidget {
                 ),
               ),
               TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  showModalBottomSheet(
+                      context: context,
+                      showDragHandle: true,
+                      builder: (context) {
+                        return HideTodoSheet();
+                      },
+                  );
+                },
                 child: Row(
                   children: [
                     Text(
