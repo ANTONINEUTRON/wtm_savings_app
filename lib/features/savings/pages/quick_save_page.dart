@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:wtm_savings_app/features/savings/widgets/choose_a_wallet_section.dart';
 
-class QuickSavePage extends StatelessWidget {
+class QuickSavePage extends StatefulWidget {
   const QuickSavePage({super.key});
+
+  @override
+  State<QuickSavePage> createState() => _QuickSavePageState();
+}
+
+class _QuickSavePageState extends State<QuickSavePage> {
+  String amount = "";
 
   @override
   Widget build(BuildContext context) {
@@ -35,15 +43,38 @@ class QuickSavePage extends StatelessWidget {
             ),
           ),
           TextField(
+            onChanged: (value){
+              setState(() {
+                amount = value;
+              });
+            },
             decoration: InputDecoration(
-              hintText: " 5000",
-              border: OutlineInputBorder(),
-              prefix: Text("NGN")
+                hintText: " 5000",
+                border: OutlineInputBorder(),
+                prefixText: "NGN",
+                prefixStyle: TextStyle(
+                  color: Colors.grey
+                ),
+                hintStyle: TextStyle(
+                  color: Colors.grey
+                ),
             ),
-            keyboardType: TextInputType.number,
+            keyboardType: TextInputType.numberWithOptions(decimal: true),
           ),
+          amount.isEmpty
+              ? SizedBox(
+                height: 16,
+              )
+              : ChooseAWalletSection(),
           ElevatedButton(
               onPressed: (){},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8)
+                ),
+              ),
               child: Text("Quick Save"),
           )
         ],
