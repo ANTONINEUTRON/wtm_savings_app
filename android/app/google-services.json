@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "579276291943",
+    "project_id": "wtm-backend-979c0",
+    "storage_bucket": "wtm-backend-979c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579276291943:android:0867e1652d3549b611b9c2",
+        "android_client_info": {
+          "package_name": "com.wtm.savings.wtm_savings_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579276291943-i11dom5nt0q335e1hth8p53g6qc2j58l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_56CA3vaQXzZ2lGcjBbee-hK_Mc1feRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579276291943-i11dom5nt0q335e1hth8p53g6qc2j58l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "579276291943-kk2nnnkdve91500tmboh0np1c45oo7kl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.wtm.savings.wtmSavingsApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:579276291943:android:ccac83c4c08776f911b9c2",
+        "android_client_info": {
+          "package_name": "com.wtm.wtm_auth_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "579276291943-1gjpljvbfhb2i84audcitr6f2pci5sk9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wtm.wtm_auth_app",
+            "certificate_hash": "8bc25a1ef8567c9a26b6feaed51760d238ce1c67"
+          }
+        },
+        {
+          "client_id": "579276291943-i11dom5nt0q335e1hth8p53g6qc2j58l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_56CA3vaQXzZ2lGcjBbee-hK_Mc1feRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "579276291943-i11dom5nt0q335e1hth8p53g6qc2j58l.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "579276291943-kk2nnnkdve91500tmboh0np1c45oo7kl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.wtm.savings.wtmSavingsApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>579276291943-kk2nnnkdve91500tmboh0np1c45oo7kl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.579276291943-kk2nnnkdve91500tmboh0np1c45oo7kl</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>579276291943-1gjpljvbfhb2i84audcitr6f2pci5sk9.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBG8K1OmmeztI4dDiotFLpEWsxIQEwhCPU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>579276291943</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.wtm.savings.wtmSavingsApp</string>
+	<key>PROJECT_ID</key>
+	<string>wtm-backend-979c0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>wtm-backend-979c0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:579276291943:ios:3d39c7db6b24cb5c11b9c2</string>
+</dict>
+</plist>

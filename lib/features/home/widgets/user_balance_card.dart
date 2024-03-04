@@ -36,7 +36,7 @@ class _UserBalanceDetailsState extends State<UserBalanceDetails> with SingleTick
               Padding(
                 padding: const EdgeInsets.only(right: 8.0),
                 child: SavingDetailsCard(
-                  balance: "\$20000",
+                  balance: "20000",
                   topRightWidget: ElevatedButton(
                     onPressed: () {},
                     child: Row(

@@ -1,8 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:wtm_savings_app/features/home/pages/home_page.dart';
+import 'package:wtm_savings_app/firebase_options.dart';
 
-void main() {
+void main() async{
   runApp(const MyApp());
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 }
 
 class MyApp extends StatelessWidget {
