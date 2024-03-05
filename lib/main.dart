@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:wtm_savings_app/features/home/pages/home_page.dart';
+import 'package:wtm_savings_app/features/invest/models/invest.dart';
 import 'package:wtm_savings_app/firebase_options.dart';
 
 void main() async{
@@ -8,6 +9,12 @@ void main() async{
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  print("DATA CLASS DemO");
+  var invest1 = Invest(title: "INvest1", returns: "10% per annum", banner: "");
+  var invest2 = Invest(title: "INvest1", returns: "10% per annum", banner: "");
+  print("is invest equal");
+  print(invest1);
 }
 
 class MyApp extends StatelessWidget {
