@@ -1,18 +1,12 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'package:equatable/equatable.dart';
+part 'invest.freezed.dart';
 
-class Invest extends Equatable{
-  Invest({
-    required this.title,
-    required this.returns,
-    required this.banner,
-  });
-  final String title;
-  final String returns;
-  final String banner;
-
-  @override
-  List<Object?> get props => [
-    title,returns,banner
-  ];
+@freezed
+class Invest with _$Invest{
+  const factory Invest({
+    required String title,
+    required String returns,
+    required String banner,
+  }) = _Invest;
 }

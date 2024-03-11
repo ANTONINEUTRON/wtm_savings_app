@@ -14,8 +14,6 @@ class SavingDetailsCard extends StatelessWidget {
   final String balance;
   final Function()? onClick;
 
-
-
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

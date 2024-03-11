@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wtm_savings_app/features/home/bloc/home_state.dart';
 import '../../invest/widgets/invest_details_card.dart';
-import 'saving_details_card.dart';
+import '../../savings/widgets/saving_details_card.dart';
+import '../bloc/home_bloc.dart';
 
 class UserBalanceDetails extends StatefulWidget {
   const UserBalanceDetails({
@@ -22,6 +25,8 @@ class _UserBalanceDetailsState extends State<UserBalanceDetails> with SingleTick
 
   @override
   Widget build(BuildContext context) {
+    HomeBloc homeBloc = context.read<HomeBloc>();
+
     return Column(
       children: [
         SizedBox(
@@ -37,6 +42,9 @@ class _UserBalanceDetailsState extends State<UserBalanceDetails> with SingleTick
                 padding: const EdgeInsets.only(right: 8.0),
                 child: SavingDetailsCard(
                   balance: "20000",
+                  onClick: () {
+                    homeBloc.updateTabIndex(1);
+                  },
                   topRightWidget: ElevatedButton(
                     onPressed: () {},
                     child: Row(

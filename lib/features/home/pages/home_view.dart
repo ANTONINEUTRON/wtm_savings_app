@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wtm_savings_app/features/home/widgets/my_todo_section.dart';
-import 'package:wtm_savings_app/features/home/widgets/saving_details_card.dart';
+import 'package:wtm_savings_app/features/savings/widgets/saving_details_card.dart';
 import 'package:wtm_savings_app/features/home/widgets/suggestions_section.dart';
 import 'package:wtm_savings_app/features/home/widgets/top_savings_section.dart';
 import 'package:wtm_savings_app/features/home/widgets/user_balance_card.dart';
