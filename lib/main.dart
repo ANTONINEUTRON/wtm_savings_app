@@ -4,6 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wtm_savings_app/features/home/bloc/home_bloc.dart';
 import 'package:wtm_savings_app/features/home/pages/home_page.dart';
 import 'package:wtm_savings_app/features/invest/models/invest.dart';
+import 'package:wtm_savings_app/features/login/pages/login_page.dart';
+import 'package:wtm_savings_app/features/signup/pages/registration_page.dart';
 import 'package:wtm_savings_app/firebase_options.dart';
 
 void main() async{
@@ -11,13 +13,6 @@ void main() async{
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-
-  print("DATA CLASS DemO");
-  var invest1 = Invest(title: "INvest1", returns: "10% per annum", banner: "");
-  var invest2 = Invest(title: "INvest1", returns: "10% per annum", banner: "");
-  print("is invest equal");
-
-  print(invest1==invest2);
 }
 
 class MyApp extends StatelessWidget {
@@ -36,7 +31,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           scaffoldBackgroundColor: Colors.grey.shade100,
         ),
-        home: HomePage(),
+        home: LoginPage(),
       ),
     );
   }
