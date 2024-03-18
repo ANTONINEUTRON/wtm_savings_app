@@ -5,6 +5,7 @@ import 'package:wtm_savings_app/features/home/bloc/home_bloc.dart';
 import 'package:wtm_savings_app/features/home/pages/home_page.dart';
 import 'package:wtm_savings_app/features/invest/models/invest.dart';
 import 'package:wtm_savings_app/features/login/pages/login_page.dart';
+import 'package:wtm_savings_app/features/signup/bloc/signup_bloc.dart';
 import 'package:wtm_savings_app/features/signup/pages/registration_page.dart';
 import 'package:wtm_savings_app/firebase_options.dart';
 
@@ -20,8 +21,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (BuildContext context) => HomeBloc(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+            create: (context)=>HomeBloc()
+        ),
+        BlocProvider(
+            create: (context)=>SignupBloc()
+        ),
+      ],
       child: MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
