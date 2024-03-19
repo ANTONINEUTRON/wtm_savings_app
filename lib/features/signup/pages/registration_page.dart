@@ -32,12 +32,13 @@ class _RegistrationPageState extends State<RegistrationPage> {
         // TODO: Handle this case.
         break;
       case SignupStatus.Successful:
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) {
-            return HomePage();
-          },)
-        );
+        WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+          Navigator.pushReplacement(
+              context,
+              HomePage.route(),
+          );
+          bloc.reset();
+        });
         break;
       case SignupStatus.Error:
         WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
@@ -56,7 +57,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
             Align(
               alignment: Alignment.topLeft,
               child: IconButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    _navigateToLoginPage(context);
+                  },
                   icon: Icon(
                     Icons.cancel_outlined,
                     size: 45,
@@ -94,7 +97,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
             ),
             SizedBox(height: 24,),
             ElevatedButton(
-                onPressed: () {
+                onPressed: state.signupStatus == SignupStatus.Processing ? null : () {
                   if(_isUserInputValid()){
                     bloc.registerUser(
                       fullName: fullName,
@@ -109,27 +112,38 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       topLeft: Radius.circular(16),
                       topRight: Radius.circular(16),
                       bottomRight: Radius.circular(16),
-                    )
+                    ),
                   ),
                   backgroundColor: Theme.of(context).primaryColor,
                   foregroundColor: Colors.white,
                 ),
-                child: Text("CREATE ACCOUNT")
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    if(state.signupStatus == SignupStatus.Processing)
+                      CircularProgressIndicator(),
+                    Text("CREATE ACCOUNT"),
+                  ],
+                )
             ),
             TextButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                    MaterialPageRoute(builder: (context) {
-                      return LoginPage();
-                    },)
-                  );
+                  _navigateToLoginPage(context);
                 },
                 child: Text("Already have an account? Log In"),
             )
           ],
         ),
       ),
+    );
+  }
+
+  void _navigateToLoginPage(BuildContext context) {
+    Navigator.pushReplacement(
+        context,
+      MaterialPageRoute(builder: (context) {
+        return LoginPage();
+      },)
     );
   }
 

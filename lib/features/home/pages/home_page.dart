@@ -9,6 +9,8 @@ import 'package:wtm_savings_app/features/savings/pages/savings_view.dart';
 
 class HomePage extends StatefulWidget{
 
+  static route() => MaterialPageRoute(builder: (context) => HomePage(),);
+
   @override
   State<HomePage> createState() => _HomePageState();
 }

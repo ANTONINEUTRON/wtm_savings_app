@@ -1,6 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wtm_savings_app/features/account/widgets/account_settings_item.dart';
+import 'package:wtm_savings_app/features/home/pages/home_page.dart';
+import 'package:wtm_savings_app/features/login/bloc/login_bloc.dart';
+import 'package:wtm_savings_app/features/login/pages/login_page.dart';
 
 class AccountSettings2 extends StatelessWidget {
   const AccountSettings2({
@@ -56,6 +60,10 @@ class AccountSettings2 extends StatelessWidget {
                 color: Colors.red.shade700,
               ),
             ),
+            onTap: () {
+              context.read<LoginBloc>().logout();
+              Navigator.pushReplacement(context, LoginPage.route(),);
+            },
           )
         ],
       ),

@@ -4,16 +4,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wtm_savings_app/features/home/bloc/home_bloc.dart';
 import 'package:wtm_savings_app/features/home/pages/home_page.dart';
 import 'package:wtm_savings_app/features/invest/models/invest.dart';
+import 'package:wtm_savings_app/features/login/bloc/login_bloc.dart';
 import 'package:wtm_savings_app/features/login/pages/login_page.dart';
 import 'package:wtm_savings_app/features/signup/bloc/signup_bloc.dart';
 import 'package:wtm_savings_app/features/signup/pages/registration_page.dart';
 import 'package:wtm_savings_app/firebase_options.dart';
 
 void main() async{
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -28,6 +30,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
             create: (context)=>SignupBloc()
+        ),
+        BlocProvider(
+            create: (context)=>LoginBloc()
         ),
       ],
       child: MaterialApp(
