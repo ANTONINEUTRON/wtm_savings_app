@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wtm_savings_app/features/home/bloc/home_bloc.dart';
 import 'package:wtm_savings_app/features/home/widgets/my_todo_section.dart';
 import 'package:wtm_savings_app/features/savings/widgets/saving_details_card.dart';
 import 'package:wtm_savings_app/features/home/widgets/suggestions_section.dart';
@@ -12,13 +14,14 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var homestate = context.watch<HomeBloc>().state;
     return Scaffold(
       appBar: AppBar(
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Hello Anthony",
+              "Hello ${homestate.userModel?.fullName ?? "..."}",
               style: TextStyle(
                 fontWeight: FontWeight.bold
               ),

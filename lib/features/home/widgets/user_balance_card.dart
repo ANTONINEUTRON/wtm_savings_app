@@ -26,7 +26,7 @@ class _UserBalanceDetailsState extends State<UserBalanceDetails> with SingleTick
   @override
   Widget build(BuildContext context) {
     HomeBloc homeBloc = context.read<HomeBloc>();
-
+    var homestate = context.watch<HomeBloc>().state;
     return Column(
       children: [
         SizedBox(
@@ -41,7 +41,7 @@ class _UserBalanceDetailsState extends State<UserBalanceDetails> with SingleTick
               Padding(
                 padding: const EdgeInsets.only(right: 8.0),
                 child: SavingDetailsCard(
-                  balance: "20000",
+                  balance: "${homestate.userModel?.balance}",
                   onClick: () {
                     homeBloc.updateTabIndex(1);
                   },

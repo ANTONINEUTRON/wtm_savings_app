@@ -22,7 +22,12 @@ class _HomePageState extends State<HomePage> {
     InvestView(),
     AccountView()
   ];
-  // var selectedIndex = 0;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    context.read<HomeBloc>().loadUserDetails();
+  }
 
   @override
   Widget build(BuildContext context){
